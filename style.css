@@ -141,25 +141,44 @@ main {
   background: #fff;
 }
 
-/* PUBLICATIONS LIST */
+/* PUBLICATIONS */
 
-.pub-list {
-  padding-left: 1.1rem;
-  margin: 0 0 0.5rem;
+.pub-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  background: #fff;
 }
 
-.pub-list li {
-  margin-bottom: 0.4rem;
+.pub-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
 }
 
-/* LINKS */
-
-a {
-  color: var(--accent);
+.pub-card .meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
-a.link-arrow {
-  font-size: 0.9rem;
+/* BLOG */
+
+.blog-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+  margin: 0 0 0.4rem;
+}
+
+.blog-card .meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
 }
 
 /* FOOTER */
