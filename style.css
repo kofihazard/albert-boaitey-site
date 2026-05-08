@@ -1,28 +1,44 @@
 /* -----------------------------------------------------------
-   GLOBAL VARIABLES
+   THEME VARIABLES — LIGHT MODE (DEFAULT)
 ----------------------------------------------------------- */
 :root {
   --bg: #ffffff;
- --bg-alt: #f8fafc; /* soft gray */
+  --bg-alt: #f8fafc;
   --bg-alt-soft: #f5f7fb;
-  --bg-dark: #0f1115;
+
   --text: #111827;
   --text-muted: #6b7280;
+
   --accent: #002147; /* Oxford Blue */
+
   --border: #d1d5db;
   --radius: 12px;
   --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+
   --max-width: 960px;
+
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Spectral", "Georgia", serif;
 }
 
 /* -----------------------------------------------------------
+   THEME VARIABLES — DARK MODE
+----------------------------------------------------------- */
+body.dark {
+  --bg: #0f172a;
+  --bg-alt: #1e293b;
+  --bg-alt-soft: #1a2433;
+
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+
+  --border: #334155;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* -----------------------------------------------------------
    BASE
 ----------------------------------------------------------- */
-body {
-  color: #111827; /* dark gray */
-}
 body {
   margin: 0;
   font-family: var(--font-serif);
@@ -33,18 +49,10 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-body.dark {
-  background: #020617;
-  color: #e5e7eb;
-  --text-muted: #9ca3af;
-}
-h1, h2, h3 {
-  color: #111827;
-}
-
 h1, h2, h3 {
   font-family: var(--font-sans);
   margin-top: 0;
+  color: var(--text);
 }
 
 h1 {
@@ -57,11 +65,7 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #374151;
-}
-
-body.dark h2 {
-  color: #d1d5db;
+  color: var(--text-muted);
 }
 
 h3 {
@@ -76,17 +80,12 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: #ffffffee;
+  background: var(--bg-alt-soft);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: center;
-}
-
-body.dark nav {
-  background: #020617dd;
-  border-bottom-color: #374151;
 }
 
 nav a,
@@ -129,11 +128,6 @@ main {
   transform: translateY(0);
 }
 
-body.dark .section {
-  background: #111827;
-  border-color: #374151;
-}
-
 /* -----------------------------------------------------------
    HERO
 ----------------------------------------------------------- */
@@ -145,14 +139,9 @@ body.dark .section {
   margin-bottom: 3rem;
   padding: 2.25rem 2rem;
   border-radius: 18px;
-  background: #ffffff;
+  background: var(--bg-alt);
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border);
-}
-
-body.dark .hero {
-  background: #111827;
-  border-color: #374151;
 }
 
 .hero-photo img {
@@ -172,10 +161,6 @@ body.dark .hero {
   gap: 1rem;
   font-size: 0.9rem;
   color: var(--text-muted);
-}
-
-body.dark .impact-grid {
-  color: #9ca3af;
 }
 
 /* -----------------------------------------------------------
@@ -202,18 +187,10 @@ body.dark .impact-grid {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.25rem;
-  background: #fff;
+  background: var(--bg-alt);
   margin-bottom: 1rem;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 16px var(--shadow-soft);
   transition: transform 0.2s ease;
-}
-
-body.dark .card,
-body.dark .pub-card,
-body.dark .blog-card {
-  background: #1f2937;
-  border-color: #374151;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover,
@@ -226,12 +203,6 @@ body.dark .blog-card {
 .pub-card h3,
 .blog-card h3 {
   color: var(--text);
-}
-
-body.dark .card h3,
-body.dark .pub-card h3,
-body.dark .blog-card h3 {
-  color: #f3f4f6;
 }
 
 /* -----------------------------------------------------------
@@ -300,11 +271,6 @@ footer {
   padding-top: 1.5rem;
 }
 
-body.dark footer {
-  border-top-color: #374151;
-  color: #9ca3af;
-}
-
 /* -----------------------------------------------------------
    UTILITY CLASSES
 ----------------------------------------------------------- */
@@ -314,18 +280,10 @@ body.dark footer {
   margin: 0.5rem 0;
 }
 
-body.dark .meta {
-  color: #9ca3af;
-}
-
 .hero-title {
   font-size: 1.125rem;
   color: var(--text-muted);
   margin: 0.5rem 0 1rem 0;
-}
-
-body.dark .hero-title {
-  color: #d1d5db;
 }
 
 .hero-identity {
