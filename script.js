@@ -1,7 +1,11 @@
 /* -----------------------------------------------------------
-   THEME SYSTEM — clean, robust, no flicker
+   ENABLE JS MODE
 ----------------------------------------------------------- */
+document.body.classList.add('js-enabled');
 
+/* -----------------------------------------------------------
+   THEME SYSTEM
+----------------------------------------------------------- */
 function applyTheme(isDark) {
   const body = document.body;
   const toggle = document.getElementById('toggle-dark');
@@ -27,11 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme(isDark);
 });
 
-
 /* -----------------------------------------------------------
-   SCROLL REVEAL — Intersection Observer
+   SCROLL REVEAL
 ----------------------------------------------------------- */
-
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.section');
 
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.05 });
 
   sections.forEach(section => observer.observe(section));
 });
