@@ -1,7 +1,7 @@
 /* -----------------------------------------------------------
-   ENABLE JS MODE
+   ENABLE JS MODE IMMEDIATELY (no flicker)
 ----------------------------------------------------------- */
-document.body.classList.add('js-enabled');
+document.documentElement.classList.add('js-enabled');
 
 /* -----------------------------------------------------------
    THEME SYSTEM
