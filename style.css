@@ -125,12 +125,12 @@ main {
 }
 
 /* JS-enabled animation */
-.js-enabled .section {
+html.js-enabled .section {
   opacity: 0;
   transform: translateY(20px);
 }
 
-.js-enabled .section.visible {
+html.js-enabled .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
