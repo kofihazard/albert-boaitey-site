@@ -20,15 +20,19 @@
 }
 
 /* ----------------------------------------------------------
-   BASE STYLES
+   BASE TYPOGRAPHY (NEW)
 ---------------------------------------------------------- */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
 }
 
 a {
@@ -82,8 +86,7 @@ nav a {
 }
 
 .hero-title {
-  font-family: "Spectral", serif;
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   margin: 0;
 }
 
@@ -94,8 +97,8 @@ nav a {
 }
 
 .about-text {
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1.1rem;
+  line-height: 1.75;
   margin-top: 1rem;
   max-width: 650px;
 }
@@ -138,17 +141,16 @@ nav a {
    SECTIONS
 ---------------------------------------------------------- */
 .section {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 .section h2 {
-  font-family: "Spectral", serif;
-  font-size: 1.9rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 /* ----------------------------------------------------------
-   PUBLICATION / TALK CARDS
+   CARDS
 ---------------------------------------------------------- */
 .pub-card {
   background: var(--card-bg);
@@ -178,7 +180,7 @@ nav a {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--accent);
 }
