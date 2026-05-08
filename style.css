@@ -78,11 +78,13 @@ h1, h2, h3 {
 }
 
 .hero-photo img {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 300px;
   border-radius: 12px;
   object-fit: cover;
+  object-position: top;
 }
+
 
 /* ----------------------------------------------------------
    Cards (used for research, publications, talks)
