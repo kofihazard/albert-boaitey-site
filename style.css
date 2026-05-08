@@ -3,7 +3,7 @@
 ----------------------------------------------------------- */
 :root {
   --bg: #ffffff;
-  --bg-alt: #ffffff;
+ --bg-alt: #f8fafc; /* soft gray */
   --bg-alt-soft: #f5f7fb;
   --bg-dark: #0f1115;
   --text: #111827;
@@ -21,6 +21,9 @@
    BASE
 ----------------------------------------------------------- */
 body {
+  color: #111827; /* dark gray */
+}
+body {
   margin: 0;
   font-family: var(--font-serif);
   background: var(--bg);
@@ -34,6 +37,9 @@ body.dark {
   background: #020617;
   color: #e5e7eb;
   --text-muted: #9ca3af;
+}
+h1, h2, h3 {
+  color: #111827;
 }
 
 h1, h2, h3 {
