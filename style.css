@@ -1,43 +1,67 @@
 /* ----------------------------------------------------------
-   Base Typography & Layout
+   GLOBAL VARIABLES
 ---------------------------------------------------------- */
-
-html {
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --accent: #003366;
+  --accent-light: #e6f0ff;
+  --card-bg: #f7f7f7;
+  --border: #dddddd;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #fafafa;
-  color: #222;
-  line-height: 1.6;
+.dark {
+  --bg: #111;
+  --text: #e5e5e5;
+  --accent: #66aaff;
+  --accent-light: #1a1a1a;
+  --card-bg: #1b1b1b;
+  --border: #333;
 }
 
 /* ----------------------------------------------------------
-   Navigation
+   BASE STYLES
 ---------------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ----------------------------------------------------------
+   NAVIGATION
+---------------------------------------------------------- */
 nav {
   display: flex;
-  gap: 1.2rem;
-  padding: 1rem 2rem;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
 nav a {
-  text-decoration: none;
-  color: #003366;
   font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 #toggle-dark {
@@ -47,122 +71,125 @@ nav a:hover {
 }
 
 /* ----------------------------------------------------------
-   Sections & Spacing
+   HERO SECTION
 ---------------------------------------------------------- */
-
-.section {
-  padding: 1rem 2rem;
-  margin-bottom: 1.5rem;
-}
-
-h1, h2, h3 {
-  font-family: 'Spectral', serif;
-  margin-top: 0;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #444;
-}
-
-/* ----------------------------------------------------------
-   Hero Section
----------------------------------------------------------- */
-
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem 2rem;
+  gap: 3rem;
+  padding: 2rem 0;
 }
 
+.hero-title {
+  font-family: "Spectral", serif;
+  font-size: 2.6rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  color: var(--accent);
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-top: 1rem;
+  max-width: 650px;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* HERO IMAGE — full head visible */
 .hero-photo img {
   width: 240px;
   height: 300px;
   border-radius: 12px;
   object-fit: cover;
   object-position: top;
+  border: 1px solid var(--border);
 }
 
+/* ----------------------------------------------------------
+   SECTIONS
+---------------------------------------------------------- */
+.section {
+  margin-top: 3rem;
+}
+
+.section h2 {
+  font-family: "Spectral", serif;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
 
 /* ----------------------------------------------------------
-   Cards (used for research, publications, talks)
+   PUBLICATION / TALK CARDS
 ---------------------------------------------------------- */
-
 .pub-card {
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
+  background: var(--card-bg);
   padding: 1rem 1.2rem;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
   margin-bottom: 1rem;
 }
 
 .pub-card .meta {
   font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
+  color: var(--accent);
+  margin-top: 0.3rem;
 }
 
 /* ----------------------------------------------------------
-   Footer
+   FOOTER
 ---------------------------------------------------------- */
-
 footer {
   text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-  background: #ffffff;
-  border-top: 1px solid #e5e5e5;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
 }
 
 /* ----------------------------------------------------------
-   Dark Mode
+   RESPONSIVE DESIGN
 ---------------------------------------------------------- */
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 
-.dark {
-  background: #111;
-  color: #e5e5e5;
-}
+  .hero-photo img {
+    width: 220px;
+    height: 280px;
+  }
 
-.dark nav {
-  background: #1a1a1a;
-  border-bottom: 1px solid #333;
-}
-
-.dark nav a {
-  color: #c9dfff;
-}
-
-.dark .pub-card {
-  background: #1a1a1a;
-  border-color: #333;
-}
-
-.dark footer {
-  background: #1a1a1a;
-  border-top: 1px solid #333;
-}
-
-/* ----------------------------------------------------------
-   Disable global-band entirely
----------------------------------------------------------- */
-
-.global-band {
-  display: none !important;
-}
-
-/* ----------------------------------------------------------
-   Scroll Reveal (JS-enabled)
----------------------------------------------------------- */
-
-.js-enabled .section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.js-enabled .section.visible {
-  opacity: 1;
-  transform: translateY(0);
+  .hero-buttons {
+    justify-content: center;
+  }
 }
