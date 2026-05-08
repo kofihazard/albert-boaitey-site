@@ -123,10 +123,25 @@ main {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.section {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.75rem 1.75rem 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
 .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+
 
 /* -----------------------------------------------------------
    HERO
